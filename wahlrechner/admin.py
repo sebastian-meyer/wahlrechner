@@ -36,7 +36,7 @@ class TheseResource(resources.ModelResource):
 
 
 class TheseAdmin(ImportExportModelAdmin):
-    list_display = ["these_nr", "these_keyword", "these_text"]
+    list_display = ["these_nr", "these_keyword", "these_text", "these_text_footer", "these_text_footer_url"]
     list_display_links = ["these_keyword"]
     ordering = ["these_nr"]
     search_fields = ["these_keyword", "these_text"]

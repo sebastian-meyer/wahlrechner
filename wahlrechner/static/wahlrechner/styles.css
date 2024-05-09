@@ -44,7 +44,8 @@
     @apply text-left;
 }
 
-.content .these.counter {
+.content .these.counter,
+.content .these.keyword {
     @apply font-mono text-gray-500 dark:text-gray-400 mb-2;
 }
 
@@ -54,6 +55,14 @@
 
 .content .these.clue {
     @apply mb-1 text-sm italic text-gray-600 dark:text-gray-400 text-center;
+}
+
+.content .these.link {
+    @apply text-blue-600 dark:text-blue-400 underline;
+}
+
+.content .these.link:hover {
+    @apply text-blue-800 dark:text-blue-600;
 }
 
 /********/

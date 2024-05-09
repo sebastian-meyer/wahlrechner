@@ -9,9 +9,17 @@
 
 {% block content %}
     <div class="content lg:p-10">
-
+        <div class="these keyword">{{ these_current.these_keyword }}</div>
         <div class="these counter">These {{ index.0 }} von {{ index.1 }}</div>
         <div class="these title">{{ these_current.these_text }}</div>
+        <div class="these footer">{{ these_current.these_text_footer }}</div>
+        {% if these_current.these_text_footer_url != '' %}
+        <div class="these link">
+            <a href="{{ these_current.these_text_footer_url }}" target="_blank" rel="noopener noreferrer">
+            --> Link
+            </a>
+        </div>
+        {% endif %}
 
         {# Erhalte Position des Nutzers zu der These #}
         {% alias opinions|get_opinion:these_current as opinion %}
