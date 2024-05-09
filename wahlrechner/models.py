@@ -17,6 +17,12 @@ class These(models.Model):
     these_text = models.TextField(
         "Vollständige These", help_text=these_text_help, max_length=400
     )
+    these_text_footer = models.TextField(
+        "Fußnote", help_text="Fußnote zur These", max_length=400, default=''
+    )
+    these_text_footer_url= models.TextField(
+        "URL zur Fußnote", help_text="URL zur Fußnote", max_length=400, default=''
+    )
 
     these_nr_help = """Die Thesen-Nummer gibt Auskunft über die Reihenfolge, in der alle Thesen
     angezeigt werden. Dabei wird als erstes die These mit der niedrigsten Thesen-Nummer angezeigt,
