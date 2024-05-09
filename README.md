@@ -1,3 +1,5 @@
+# ACHTUNG: Dies ist ein Fork des [offiziellen Wahlrechners](https://github.com/wahlrechner/wahlrechner) für [DresdenZero](https://dresdenzero.de/)!
+
 <p align="center">
   <img width="460" src="https://raw.githubusercontent.com/sebastian-meyer/wahlrechner/development/.github/logo-light.png#gh-light-mode-only">
   <img width="460" src="https://raw.githubusercontent.com/sebastian-meyer/wahlrechner/development/.github/logo-dark.png#gh-dark-mode-only">
@@ -27,7 +29,7 @@
 
 ## Installation
 
-Eine vollständige Anleitung zum Aufsetzen einer Wahlrechner-Instanz findest du hier:
+Eine vollständige Anleitung zum Aufsetzen dieser Wahlrechner-Instanz findest du hier:
 https://github.com/sebastian-meyer/wahlrechner-docker
 
 ## Screenshots
@@ -38,13 +40,3 @@ https://github.com/sebastian-meyer/wahlrechner-docker
   <img width="full" src="https://raw.githubusercontent.com/sebastian-meyer/wahlrechner/development/.github/screenshot-2-light.png#gh-light-mode-only">
   <img width="full" src="https://raw.githubusercontent.com/sebastian-meyer/wahlrechner/development/.github/screenshot-2-dark.png#gh-dark-mode-only">
 </p>
-
-## Ausprobieren
-
-Wenn du einen Wahlrechner ausprobieren möchtest, dann nutze doch einen der Wahlempfehlungshilfen, die mit diesem Projekt umgesetzt wurden:
-
-- [Buxt-O-Mat zur nds. Kommunalwahl 2021](https://buxt-o-mat.de/)
-- [Stad-O-Mat zur nds. Kommunalwahl 2021](https://kw21.stad-o-mat.de/)
-- [Stad-O-Mat zur nds. Landtagswahl 2022](https://stad-o-mat.de/)
-- [Delm-O-Mat zur nds. Landtagswahl 2022](https://delm-o-mat.de/)
-- [Wahlkompass zur Europawahl 2024](https://wahl.dresdenzero.de/)
