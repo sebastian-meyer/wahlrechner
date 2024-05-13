@@ -85,6 +85,16 @@
                         <i>Von der Partei liegt zu dieser These keine Begründung vor.</i>
                     {% endif %}
                 </p>
+                {# Hinweis zur Begründung der Partei #}
+                <p class="text-sm text-left text-gray-600 dark:text-gray-300">
+                    {% if antwort.antwort_text_hint %}
+                    <a href="{{ antwort.antwort_text_hint.strip }}" target="_blank" rel="noopener noreferrer">
+                    --> Link: Hinweis zur Begründung der Partei
+                    </a>
+                      
+                
+                    {% endif %}
+                </p>
 
             </div>
 

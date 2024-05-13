@@ -109,6 +109,11 @@ class Antwort(models.Model):
     antwort_text = models.TextField(
         "Antwort", help_text=antwort_text_help, max_length=1000, blank=True
     )
+    antwort_text_help_hint = """<i>Maximal 1000 Zeichen</i><br>
+    Hinweis zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
+    antwort_text_hint = models.TextField(
+        "Antwort", help_text=antwort_text_help_hint, max_length=1000, default ='', blank=True
+    )
 
     def __str__(self):
         return f"{self.antwort_these.these_keyword} - {self.antwort_partei.partei_name}"
