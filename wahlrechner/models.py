@@ -112,7 +112,12 @@ class Antwort(models.Model):
     antwort_text_help_hint = """<i>Maximal 1000 Zeichen</i><br>
     Hinweis zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
     antwort_text_hint = models.TextField(
-        "Antwort", help_text=antwort_text_help_hint, max_length=1000, default ='', blank=True
+        "Hinweis", help_text=antwort_text_help_hint, max_length=1000, default ='', blank=True
+    )
+    antwort_text_help_hint_link = """<i>Maximal 1000 Zeichen</i><br>
+    Hinweis Link zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
+    antwort_text_hint_link = models.TextField(
+        "Hinweis Link", help_text=antwort_text_help_hint_link, max_length=1000, default ='', blank=True
     )
 
     def __str__(self):

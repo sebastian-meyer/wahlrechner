@@ -88,11 +88,14 @@
                 {# Hinweis zur Begründung der Partei #}
                 <p class="text-sm text-left text-gray-600 dark:text-gray-300">
                     {% if antwort.antwort_text_hint %}
-                    <a href="{{ antwort.antwort_text_hint.strip }}" target="_blank" rel="noopener noreferrer">
-                    --> Link: Hinweis zur Begründung der Partei
+                    <i>Hinweis:
+                    {{ antwort.antwort_text_hint.strip }}</i>
+                    {% endif %}
+                    
+                    {% if antwort.antwort_text_hint_link %}
+                    <a href="{{ antwort.antwort_text_hint_link.strip }}" target="_blank" rel="noopener noreferrer">
+                        <i>--> Link</i>
                     </a>
-                      
-                
                     {% endif %}
                 </p>
 
