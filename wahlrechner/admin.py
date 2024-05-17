@@ -2,7 +2,7 @@ from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
-from .models import Antwort, Partei, These
+from .models import Antwort, Partei, These, IntroPage
 
 # Register your models here.
 
@@ -48,12 +48,19 @@ class ParteiResource(resources.ModelResource):
     class Meta:
         model = Partei
 
-
 class ParteiAdmin(ImportExportModelAdmin):
     search_fields = ["partei_name"]
     resource_class = ParteiResource
 
+class IntroResource(resources.ModelResource):
+    class Meta:
+        model = IntroPage
+
+class IntroAdmin(ImportExportModelAdmin):
+    search_fields = ["intro_name"]
+    resource_class = IntroResource
 
 admin.site.register(These, TheseAdmin)
 admin.site.register(Antwort, AntwortAdmin)
 admin.site.register(Partei, ParteiAdmin)
+admin.site.register(IntroPage, IntroAdmin)

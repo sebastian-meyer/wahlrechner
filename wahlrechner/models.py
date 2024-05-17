@@ -109,6 +109,16 @@ class Antwort(models.Model):
     antwort_text = models.TextField(
         "Antwort", help_text=antwort_text_help, max_length=1000, blank=True
     )
+    antwort_text_help_hint = """<i>Maximal 1000 Zeichen</i><br>
+    Hinweis zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
+    antwort_text_hint = models.TextField(
+        "Hinweis", help_text=antwort_text_help_hint, max_length=1000, default ='', blank=True
+    )
+    antwort_text_help_hint_link = """<i>Maximal 1000 Zeichen</i><br>
+    Hinweis Link zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
+    antwort_text_hint_link = models.TextField(
+        "Hinweis Link", help_text=antwort_text_help_hint_link, max_length=1000, default ='', blank=True
+    )
 
     def __str__(self):
         return f"{self.antwort_these.these_keyword} - {self.antwort_partei.partei_name}"
@@ -116,3 +126,27 @@ class Antwort(models.Model):
     class Meta:
         verbose_name = "Antwort"
         verbose_name_plural = "Antworten"
+
+class IntroPage(models.Model):
+  
+    intro_page_active = [
+            ("a", "Aktiv"),
+           
+          
+        ]
+    intro_page_active_help = (
+            """Wähle aus, ob der WahloMat Aktiv sein soll."""
+        )
+    antwort_intro_page = models.CharField(
+        "Wahl O Mat Aktiv",
+        choices=intro_page_active,
+        help_text=intro_page_active_help,
+        max_length=1,
+    )
+
+    def __str__(self):
+        return self.antwort_intro_page
+
+    class Meta:
+        verbose_name = "WahlOMatAktiv"
+        verbose_name_plural = "WahlOMatAktiv"
