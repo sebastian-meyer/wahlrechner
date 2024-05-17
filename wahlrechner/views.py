@@ -6,7 +6,8 @@ from .parse import *
 
 
 def start(request):
-    context = {"thesen": alle_thesen(), "opinions": decode_zustand()}
+    context = {"thesen": alle_thesen(), "opinions": decode_zustand(), "intro_page": intro_page()}
+   # breakpoint()
     return render(request, "wahlrechner/start.html", context)
 
 

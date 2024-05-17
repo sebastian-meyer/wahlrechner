@@ -5,22 +5,35 @@
 {% block title %}{% wahlrechner_title %}{% endblock %}
 2
 {% block sidebar %}
+{% if intro_page %}
     {% include "wahlrechner/sidebar.html" with icon_default="" url_template="" %}
+{% endif %}
 {% endblock %}
 
 {% block content %}
 
     <div class="content">
-        {% include 'intro_page.html' %}
+       
+        {% if intro_page %}
+            {% include 'intro_page.html' %}
+        {% else %}
+            <p>
+            Der Wahlkompass Dresden wird in Kürze verfügbar sein. <br>
+            </p>
+        {% endif %}
+
     </div>
 
     <div class="btn-row">
         {# Leeres Div, um die restlichen Buttons korrekt anzuordnen #}
         <div class="-mb-2"></div>
+        {% if intro_page %}
 
+        
         {% if thesen.first %}
             {% url "these" thesen.first.pk 0 as url %}
             {% include "snippets/btn.html" with text="Start" url=url icon="cright" pos="r" sc="39" %}
+        {% endif %}
         {% endif %}
     </div>
 
@@ -28,9 +41,9 @@
 
 
 {% block shortcuts %}
-
+{% if intro_page %}
     <li>
         <span class="icon">&rarr;</span> Start
     </li>
-
+{% endif %}
 {% endblock %}

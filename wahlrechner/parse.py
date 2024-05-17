@@ -4,7 +4,7 @@ import os
 import numpy
 from django.http.response import Http404
 
-from .models import These, Partei, Antwort
+from .models import These, Partei, Antwort, IntroPage
 
 SCHLUESSEL = {
     "0": [None, None],  # These nicht beantwortet (Null)
@@ -30,6 +30,9 @@ def alle_thesen():
     """Gibt alle Thesen sortiert in einer Liste zurück."""
     return These.objects.all().order_by("these_nr")
 
+def intro_page():
+    """Gibt die Intro Page zurück."""
+    return IntroPage.objects.first()
 
 def decode_zustand(zustand=0):
     """Dekodiert die Zustandsinformationen, gibt ein Opinions-Dictionary zurück."""

@@ -126,3 +126,27 @@ class Antwort(models.Model):
     class Meta:
         verbose_name = "Antwort"
         verbose_name_plural = "Antworten"
+
+class IntroPage(models.Model):
+  
+    intro_page_active = [
+            ("a", "Aktiv"),
+           
+          
+        ]
+    intro_page_active_help = (
+            """Wähle aus, ob der WahloMat Aktiv sein soll."""
+        )
+    antwort_intro_page = models.CharField(
+        "Wahl O Mat Aktiv",
+        choices=intro_page_active,
+        help_text=intro_page_active_help,
+        max_length=1,
+    )
+
+    def __str__(self):
+        return self.antwort_intro_page
+
+    class Meta:
+        verbose_name = "WahlOMatAktiv"
+        verbose_name_plural = "WahlOMatAktiv"
