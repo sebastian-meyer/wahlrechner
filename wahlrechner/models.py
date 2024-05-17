@@ -110,12 +110,12 @@ class Antwort(models.Model):
         "Antwort", help_text=antwort_text_help, max_length=1000, blank=True
     )
     antwort_text_help_hint = """<i>Maximal 1000 Zeichen</i><br>
-    Hinweis zur Antwort/Begründung der Partei (z. B. Faktencheck)."""
+    Hinweis zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
     antwort_text_hint = models.TextField(
         "Hinweis", help_text=antwort_text_help_hint, max_length=1000, default ='', blank=True
     )
     antwort_text_help_hint_link = """<i>Maximal 1000 Zeichen</i><br>
-    Link zum Hinweis/Faktencheck."""
+    Hinweis Link zur vollständige Antwort/Begründung der Partei zu ihrer Position."""
     antwort_text_hint_link = models.TextField(
         "Hinweis Link", help_text=antwort_text_help_hint_link, max_length=1000, default ='', blank=True
     )
@@ -130,11 +130,13 @@ class Antwort(models.Model):
 class IntroPage(models.Model):
   
     intro_page_active = [
-        ("a", "aktiv"),
-    ]
+            ("a", "Aktiv"),
+           
+          
+        ]
     intro_page_active_help = (
-        """Wähle aus, ob der Wahlrechner aktiv sein soll. Andernfalls wird nur ein Hinweis zur baldigen Verfügbarkeit angezeigt."""
-    )
+            """Wähle aus, ob der WahloMat Aktiv sein soll."""
+        )
     antwort_intro_page = models.CharField(
         "Wahlrechner Aktiv",
         choices=intro_page_active,
@@ -146,5 +148,5 @@ class IntroPage(models.Model):
         return self.antwort_intro_page
 
     class Meta:
-        verbose_name = "WahlrechnerAktiv"
-        verbose_name_plural = "WahlrechnerAktiv"
+        verbose_name = "WahlOMatAktiv"
+        verbose_name_plural = "WahlOMatAktiv"
