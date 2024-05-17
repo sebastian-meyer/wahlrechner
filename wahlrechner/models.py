@@ -136,7 +136,7 @@ class IntroPage(models.Model):
         """Wähle aus, ob der Wahlrechner aktiv sein soll. Andernfalls wird nur ein Hinweis zur baldigen Verfügbarkeit angezeigt."""
     )
     antwort_intro_page = models.CharField(
-        "Wahl O Mat Aktiv",
+        "Wahlrechner Aktiv",
         choices=intro_page_active,
         help_text=intro_page_active_help,
         max_length=1,
