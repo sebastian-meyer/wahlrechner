@@ -138,7 +138,7 @@ class IntroPage(models.Model):
             """Wähle aus, ob der WahloMat Aktiv sein soll."""
         )
     antwort_intro_page = models.CharField(
-        "Wahlrechner Aktiv",
+        "Wahl O Mat Aktiv",
         choices=intro_page_active,
         help_text=intro_page_active_help,
         max_length=1,
