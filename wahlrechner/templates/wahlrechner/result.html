@@ -81,6 +81,11 @@
                             "{{ partei.partei_beschreibung.strip }}" </p>
                   
                     {% endif %}
+                    {% if partei.partei_hinweis %}
+                    <p class="text-sm text-left text-gray-600 dark:text-gray-300">
+                        {{ partei.partei_hinweis.strip }} </p>
+              
+                    {% endif %}
 
                 </div>
             </div>
