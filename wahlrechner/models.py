@@ -51,6 +51,11 @@ class Partei(models.Model):
     partei_beschreibung = models.TextField(
         "Beschreibung", help_text=partei_beschreibung_help, max_length=1000, blank=True
     )
+    partei_hinweis_help = """<i>Maximal 1000 Zeichen</i><br>
+    Hinweis für die Partei, der auf Ergebnis-Seite angezeigt wird."""
+    partei_hinweis = models.TextField(
+        "Hinweis", help_text=partei_hinweis_help, max_length=1000, default = '', blank=True
+    )
 
     partei_bild_beschreibung = (
         """Logo oder Foto, das auf der Ergebnis-Seite angezeigt werden soll."""

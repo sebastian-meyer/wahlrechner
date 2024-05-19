@@ -5,7 +5,7 @@ from django.template.defaulttags import register
 
 @register.simple_tag(name="wahlrechner_name")
 def wahlrechner_name():
-    return os.getenv("WAHLRECHNER_NAME", default="Wahlrechner")
+    return os.getenv("WAHLRECHNER_NAME", default="Wahlkompass")
 
 
 @register.simple_tag(name="wahlrechner_title")
