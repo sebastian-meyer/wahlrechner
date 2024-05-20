@@ -1,0 +1,49 @@
+{% extends 'wahlrechner/base.html' %}
+{% load wahlrechner_extras %}
+{% load wahlrechner_name %}
+
+{% block title %}{% wahlrechner_title %}{% endblock %}
+2
+{% block sidebar %}
+{% if intro_page %}
+    {% include "wahlrechner/sidebar.html" with icon_default="" url_template="" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+       
+  
+            <p>
+                Impressum<br><br>
+Anschrift<br>
+Lokale Agenda 21 für Dresden e.V.<br>
+Schützengasse 18<br>
+01067 Dresden<br><br>
+Tel.: (0351) 418959 22<br>
+E-Mail: verein@la-dresden.de<br>
+Web: www.la-dresden.de<br>
+
+Geschäftsführung: Christine Mantu, Julia Leuterer<br>
+E-Mail: christine.mantu@la-dresden.de, julia.leuterer@la-dresden.de<br>
+
+Steuernummer 203 / 140 / 17839<br>
+Vereinsregister: VR 3435<br>
+            </p>
+      
+
+    </div>
+
+    <div class="btn-row">
+        {# Leeres Div, um die restlichen Buttons korrekt anzuordnen #}
+        <div class="-mb-2"></div>
+     
+    </div>
+
+{% endblock %}
+
+
+{% block shortcuts %}
+
+{% endblock %}

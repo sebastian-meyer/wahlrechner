@@ -15,4 +15,6 @@ urlpatterns = [
     path("reason/<int:these_pk>/<str:zustand>", views.reason, name="reason"),
     path("test404", views.test404, name="test404"),
     path("test500", views.test500, name="test500"),
+    path('impressum/', views.impressum, name='impressum'),
+    path('datenschutz/', views.datenschutz, name='datenschutz'),
 ]
