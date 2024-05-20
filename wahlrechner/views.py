@@ -4,6 +4,11 @@ from django.template.loader import render_to_string
 
 from .parse import *
 
+def impressum(request):
+    return render(request, 'wahlrechner/impressum.html')
+
+def datenschutz(request):
+    return render(request, 'wahlrechner/datenschutz.html')
 
 def start(request):
     context = {"thesen": alle_thesen(), "opinions": decode_zustand(), "intro_page": intro_page()}

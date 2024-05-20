@@ -1,0 +1,37 @@
+{% extends 'wahlrechner/base.html' %}
+{% load wahlrechner_extras %}
+{% load wahlrechner_name %}
+
+{% block title %}{% wahlrechner_title %}{% endblock %}
+2
+{% block sidebar %}
+{% if intro_page %}
+    {% include "wahlrechner/sidebar.html" with icon_default="" url_template="" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+       
+  
+            <p>
+                Datenschutz <br>
+              
+            </p>
+      
+
+    </div>
+
+    <div class="btn-row">
+        {# Leeres Div, um die restlichen Buttons korrekt anzuordnen #}
+        <div class="-mb-2"></div>
+     
+    </div>
+
+{% endblock %}
+
+
+{% block shortcuts %}
+
+{% endblock %}
