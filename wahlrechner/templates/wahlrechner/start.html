@@ -7,6 +7,8 @@
 {% block sidebar %}
 {% if intro_page %}
     {% include "wahlrechner/sidebar.html" with icon_default="" url_template="" %}
+{% else %}
+    {% include "error/sidebar.html" %}
 {% endif %}
 {% endblock %}
 
