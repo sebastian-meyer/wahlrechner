@@ -1,4 +1,4 @@
-# ACHTUNG: Dies ist ein Fork des [offiziellen Wahlrechners](https://github.com/wahlrechner/wahlrechner) für [DresdenZero](https://dresdenzero.de/)!
+# ACHTUNG: Dies ist ein Fork des [offiziellen Wahlrechners](https://github.com/wahlrechner/wahlrechner) für den [Wahlkompass Dresden](https://wahlkompass-dresden.de)!
 
 <p align="center">
   <img width="460" src="https://raw.githubusercontent.com/sebastian-meyer/wahlrechner/development/.github/logo-light.png#gh-light-mode-only">
@@ -7,7 +7,7 @@
 
 <h3 align="center"><i>Wahlrechner</i> ist eine offene, individualisierbare und transparente Wahlempfehlungshilfe.</h3>
 
-<p align="center">Wahlrechner im Einsatz: <a href="https://wahl.dresdenzero.de/"><b>DresdenZero Wahlkompass 2024</b></a></p>
+<p align="center">Wahlrechner im Einsatz: <a href="https://wahlkompass-dresden.de/"><b>Wahlkompass Dresden</b></a></p>
 
 ----
 
