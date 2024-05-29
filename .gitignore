@@ -248,3 +248,6 @@ media/
 
 # PyCharm
 .idea/
+
+# MacOS
+.DS_Store
